@@ -1,0 +1,4 @@
+en utilisant l'algorithme d'Euclide pour trouver le PGDC de 9 et 6
+PGDC(9, 6) = PGDC (6, 3)
+PGDC(6, 3) = PGDC (3, 0)
+PGDC(3, 0) = 3 (puisque y = 0)

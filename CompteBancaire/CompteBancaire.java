@@ -17,6 +17,9 @@ public class CompteBancaire {
     public double getSolde() {
         return solde;
     }
+    public String getProprietaire(){
+        return proprietaire;
+    }
 
     public int getNumero() {
         return numero;
