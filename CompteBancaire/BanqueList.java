@@ -75,6 +75,7 @@ public class BanqueList {
                 int num = x.nextInt();
                 for (int i = 0; i < comptes.size(); i++) {
                     if (comptes.get(i).getNumero() == num)
+        
                         return i;
                 }
                 break;
@@ -83,6 +84,7 @@ public class BanqueList {
                 String nom = x.next();
                 for (int i = 0; i < comptes.size(); i++) {
                     if (comptes.get(i).getProprietaire().equals(nom))
+                    
                         return i;
                 }
                 break;
