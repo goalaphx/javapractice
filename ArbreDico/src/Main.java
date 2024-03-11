@@ -1,15 +1,21 @@
 public class Main {
     public static void main(String[] args) {
+        // Vérifier qu'au moins un mot est passé en argument
+        if (args.length < 2) {
+            System.out.println("Usage: java Main <mot à chercher> <mots à insérer...>");
+            return;
+        }
+
         // Création d'un nouveau dictionnaire
         Dico d = new Dico();
 
-        // Insérer quelques mots dans le dictionnaire
-        Dico.inserer(d, "dog");
-        Dico.inserer(d, "fish");
-        Dico.inserer(d, "bird");
-
-        // Mot à rechercher (premier argument passé en ligne de commande)
+        // Récupérer le mot à chercher
         String motAChercher = args[0];
+
+        // Insérer les mots suivants dans le dictionnaire
+        for (int i = 1; i < args.length; i++) {
+            Dico.inserer(d, args[i]);
+        }
 
         // Vérifier si le mot à chercher est présent dans le dictionnaire
         boolean existe = Dico.existe(d, motAChercher);
